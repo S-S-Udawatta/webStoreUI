@@ -1,0 +1,84 @@
+.main-outer{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+
+}
+.inner{
+  width: 400px;
+  height: auto;
+  padding: 10px;
+  border: 1px solid #7f8c8d;
+  border-radius: 5px;
+}
+.back-img{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+  justify-content: left;
+}
+.button{
+  width: auto;
+
+}
+.col-12{
+  margin-bottom: 20px;
+}
+.example-full-width{
+  width: 100%;
+}
+.or-container {
+  align-items: center;
+  color: #ccc;
+  display: flex;
+  margin: 25px 0;
+}
+
+.line-separator {
+  background-color: black;
+  flex-grow: 5;
+  height: 1px;
+}
+
+.or-label {
+  flex-grow: 1;
+  margin: 0 15px;
+  text-align: center;
+  color: black;
+}
+.login{
+  padding-left: 20px;
+}
+
+.logIn-outer{
+  background-color: black;
+  width: auto;
+  height: 70px;
+  display: flex;
+  justify-content: right;
+  border-bottom: 1px solid #95a5a6 ;
+
+}
+.logIn-inner{
+  width: 20%;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}
+.logo-outer{
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.logIn-inner[_ngcontent-ggn-c83] {
+  width: 237px;
+  height: 67px;
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}

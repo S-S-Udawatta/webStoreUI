@@ -1,0 +1,48 @@
+<div class="main-outer">
+  <div class="inner">
+    <form [formGroup]="updateItemGroup" >
+
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <input type="text" formControlName="id" matInput class="form-control"  placeholder="Item ID">
+
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <input type="text" formControlName="name" matInput class="form-control" placeholder="Item Name">
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="description"matInput placeholder="Description">
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="unitPrice" matInput placeholder="Unit Price">
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+
+          <input type="text" class="form-control" formControlName="category"  matInput placeholder="Category">
+
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0">
+        <div class="col-12">
+          <input type="text" class="form-control" formControlName="tumbnail" matInput placeholder="Tumbnail">
+        </div>
+      </div>
+
+      <button class="btn btn-primary mat-raised-button" style="margin: 5px" (click)="loadDetails()">Get Details</button>
+      <button class="btn btn-primary mat-raised-button" style="margin: 5px" (click)="updateItem()">Update Item</button>
+    </form>
+  </div>
+</div>

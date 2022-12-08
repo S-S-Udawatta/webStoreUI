@@ -1,0 +1,49 @@
+.block1{
+  border:solid #f2f7fb;
+  position: relative;
+}
+.container1{
+  position: absolute;
+  left: 10px;
+  right: 600px;
+  color: white;
+  font-family: "Times New Roman";
+}
+
+
+.block2{
+  height: 500px;
+  border: solid white;
+  align-items: center;
+}
+.container2{
+  font-family: 'Times New Roman';
+  position: absolute;
+  padding-left: 550px;
+  padding-top: 130px;
+  padding-right: 0;
+}
+
+.logIn-outer{
+  background-color: black;
+  width: auto;
+  height: 70px;
+  display: flex;
+  justify-content: right;
+  border-bottom: 1px solid #95a5a6 ;
+
+}
+.logIn-inner{
+  width: 20%;
+  height: 60px;
+  padding: 10px;
+  display: flex;
+  justify-content: right;
+}
+.logo-outer{
+  width: 80%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+

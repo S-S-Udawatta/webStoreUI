@@ -1,0 +1,60 @@
+<div class="navbar navbar-dark bg-primary shadow-sm ">
+
+  <div class="navbar-brand align-item-center d-flex logo " >
+    <i style="font-size: 40px; margin-top: 10px; margin-left: 10px" class="fa fa-shipping-fast"></i>
+    <strong style="font-size: 40px;" >Store</strong>
+  </div>
+
+  <button class="btn btn-primary mat-raised-button " style="margin-right: 5px" (click)="userLogout()">
+    log out
+  </button>
+
+</div>
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+
+  <li [ngbNavItem]="1">
+
+    <a class="tab" style="margin-left: 10px" ngbNavLink>Items</a>
+    <ng-template ngbNavContent>
+      <app-manage-item></app-manage-item>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="2">
+    <a class="tab" ngbNavLink>Add</a>
+    <ng-template ngbNavContent>
+      <app-add-item></app-add-item>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="3">
+    <a class="tab" ngbNavLink>Update</a>
+    <ng-template ngbNavContent>
+     <app-update-item></app-update-item>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="4">
+    <a class="tab" ngbNavLink>Customers</a>
+    <ng-template ngbNavContent>
+      <app-customer></app-customer>
+    </ng-template>
+  </li>
+
+  <li [ngbNavItem]="5">
+    <a class="tab" ngbNavLink>Orders</a>
+    <ng-template ngbNavContent>
+      <app-order></app-order>
+    </ng-template>
+  </li>
+
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+
+
+

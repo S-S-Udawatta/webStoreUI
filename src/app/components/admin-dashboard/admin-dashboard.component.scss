@@ -1,0 +1,39 @@
+.form-control{
+  border-radius: 5px;
+  width: 300px;
+  margin: 10px;
+}
+
+.tab{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Times New Roman";
+}
+.cart{
+  position:absolute;
+  right: 0;
+  margin-right: 5px;
+  margin-top: 5px;
+}
+
+.card-top{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background: white;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+}
+.item{
+  width: 20px;
+}
+.card{
+  padding: 10px;
+  margin: 35px;
+  border: 2px solid black;
+  background: azure;
+}
+

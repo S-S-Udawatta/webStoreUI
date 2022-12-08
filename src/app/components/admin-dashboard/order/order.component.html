@@ -1,0 +1,42 @@
+<ng-container *ngIf="orderList.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+
+          <tr>
+            <th>No</th>
+            <th>Customer Email</th>
+            <th>Total Price</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Date</th>
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr *ngFor="let order of orderList ">
+            <td>{{orderList.indexOf(order)+1}}</td>
+            <td>{{order.customer.email}}</td>
+            <td>{{order.totalPrice}}</td>
+            <td>{{order.address}}</td>
+            <td>{{order.contact}}</td>
+            <td>{{order.date.slice(0,10)}}</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container class="container" *ngIf="orderList.length == 0">
+  <div class="center">
+    <img src="assets/empty%20cart.png" alt="">
+    <h4>No Orders Yet!</h4>
+  </div>
+</ng-container>

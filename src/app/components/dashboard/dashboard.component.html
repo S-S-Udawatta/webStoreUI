@@ -1,0 +1,59 @@
+<div class="navbar navbar-dark bg-primary shadow-sm ">
+
+  <div class="navbar-brand align-item-center d-flex logo " >
+    <i style="font-size: 40px; margin-top: 10px; margin-left: 10px" class="fa fa-shipping-fast"></i>
+    <strong style="font-size: 40px;" >Store</strong>
+  </div>
+
+  <div class="formGroup" style="position: absolute; right: 80px" >
+    <input type="text" (keyup)="search($event)"  [(ngModel)]="searchItem" class="form-control" placeholder="Search Product" >
+  </div>
+  <button class="btn btn-primary mat-raised-button " style="margin-right: 5px" (click)="userLogout()">
+    log out
+  </button>
+
+</div>
+
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+
+  <li [ngbNavItem]="1">
+    <a class="tab" style="margin-left: 10px" ngbNavLink>All</a>
+    <ng-template ngbNavContent>
+      <app-allproduct></app-allproduct>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a class="tab" ngbNavLink>Men's</a>
+    <ng-template ngbNavContent>
+      <app-men-product></app-men-product>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="3">
+    <a class="tab" ngbNavLink>Women's</a>
+    <ng-template ngbNavContent>
+      <app-women-product></app-women-product>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="4">
+    <a class="tab" ngbNavLink>Shoes</a>
+    <ng-template ngbNavContent>
+      <app-shoes></app-shoes>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="5">
+  <div class="cart" >
+    <button class="btn btn-primary "  routerLink="cart">
+      <i style="font-size: 30px" class="fa fa-cart-plus"></i>
+      <div style="font-size: 10px" class="badge bg-danger">{{cartService.cartList.length}}</div>
+    </button>
+  </div>
+  </li>
+
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
+
+
+
+
+

@@ -1,0 +1,53 @@
+<div class="navbar navbar-dark bg-primary shadow-sm ">
+
+  <div class="navbar-brand align-item-center d-flex logo " >
+    <i style="font-size: 40px; margin-top: 10px; margin-left: 10px" class="fa fa-shipping-fast"></i>
+    <strong style="font-size: 40px;" >Store</strong>
+  </div>
+
+  <button class="btn btn-primary  mat-raised-button  " style="margin-right: 5px" (click)="back()">
+    Back
+  </button>
+</div>
+<div class="main-outer" >
+    <div class="inner">
+      <div class="form-out">
+      <form [formGroup]="paymentForm" (ngSubmit)="placeOrder()" >
+        <div class="row" style="margin: 0">
+
+          <ng-container *ngFor="let item of getCartList()">
+
+            <h6 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100ch">{{item.name}} :  ${{item.unitPrice}}  *  {{item.qty}}</h6>
+            <hr>
+
+          </ng-container>
+
+          <br>
+
+          <h4>Total :  ${{cartService.getGrandTotal()}} </h4>
+          <div class="col-12">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input type="text" formControlName="address"  matInput class="form-control" placeholder="Address">
+            </mat-form-field>
+          </div>
+
+          <div class="col-12">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input type="text" formControlName="contact"  matInput class="form-control" placeholder="Contact">
+            </mat-form-field>
+          </div>
+
+
+
+          <div class="col-12">
+
+            <button  [disabled]="paymentForm.invalid" class="btn btn-primary " mat-raised-button color="primary"     >Place Order</button>
+
+          </div>
+
+
+        </div>
+      </form>
+    </div>
+</div>
+</div>

@@ -1,0 +1,24 @@
+<div class="logIn-outer">
+  <div class="logo-outer"><a href="http://localhost:4200/"><img src="assets/logo.png" alt="Logo" style="height: 60px"></a></div>
+
+  <div class="logIn-inner">
+    <input type="button"    id="btnCustomerLogin" class="btn btn bg-primary mat-raised-button btn-login" routerLink="customer" value="Customer Signup" > |
+
+    <input type="button"  id="btnAdminLogin" class="btn btn bg-gradient btn-login" style="background-color: aqua" routerLink="admin" value="Admin login">
+  </div>
+</div>
+
+<div  class="block1" style="background-image: url(./assets/1.gif); height: 30rem; width: auto">
+  <div class="container1 text-decoration-underline ">
+    <h1>Women's Wear</h1>
+    <button class="btn btn-lg btn-primary " (click)="router.navigate(['signup'])">Sign Up Now</button>
+  </div>
+</div>
+
+
+<div  class="block2 " style="background-image: url(./assets/3.jpg); ">
+  <div class="container2 ">
+    <h1 >Men's Wear</h1>
+    <button  class="btn btn-lg btn-primary  " (click)="router.navigate(['signup'])">Sign Up Now</button>
+  </div>
+</div>

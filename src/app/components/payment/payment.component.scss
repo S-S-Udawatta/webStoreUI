@@ -1,0 +1,25 @@
+.main-outer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
+
+.inner{
+  height: auto;
+  width: 300px;
+  position: absolute;
+  border: #7f8c8d 1px solid;
+  border-radius: 5px;
+}
+
+.button{
+  font-family: "Times New Roman";
+}
+
+.form-out{
+  margin: 5px;
+}

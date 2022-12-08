@@ -1,0 +1,68 @@
+<div class="logIn-outer">
+  <div class="logo-outer"><a href="http://localhost:4200/"><img src="assets/logo.png" alt="Logo" style="height: 60px"></a></div>
+
+  <div class="logIn-inner">
+    <input type="button"    id="btnCustomerLogin" class="btn btn bg-primary bg-gradient btn-login" (click)="router.navigate([''])" value="Back to Welcome" > |
+
+  </div>
+</div>
+
+<div class="main-outer" >
+  <div class="back-img" style="background-image: url(./assets/5.jpg);">
+    <div class="inner">
+      <h3 class="text-center heading" >Create your account.</h3>
+
+      <form [formGroup]="saveForm" (ngSubmit)="saveCustomer()" >
+        <div class="row" style="margin: 0">
+
+
+          <div class="col-12">
+            <mat-form-field class="example-full-width" appearance="fill">
+
+              <input type="text" formControlName="name" matInput class="form-control" placeholder="User Name" >
+
+            </mat-form-field>
+          </div>
+
+
+
+          <div class="col-12">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input type="email" matInput pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" formControlName="email"  class="form-control"  placeholder="User Email">
+            </mat-form-field>
+          </div>
+
+          <div class="col-12">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input type="password" formControlName="password" class="form-control" matInput placeholder="Password">
+            </mat-form-field>
+          </div>
+
+          <div class="col-12">
+
+            <button class="button" [disabled]="saveForm.invalid"  mat-raised-button color="primary">Create Account</button>
+
+          </div>
+
+          <div class="or-container"><div class="line-separator"></div> <div class="or-label">or</div><div class="line-separator"></div></div>
+
+
+          <div class="row">
+            <div class="col-md-12" style="width: 100%; justify-content: center; display: inline-flex">
+              <asl-google-signin-button *ngIf="!user" ></asl-google-signin-button> Signup Using Google
+
+            </div>
+          </div>
+          <br>
+
+          <p class="text-inverse text-center">Already have an account? <button type="button" class="btn btn btn-primary" (click)="router.navigate(['customer/login'])">Login</button></p>
+        </div>
+
+
+
+      </form>
+
+    </div>
+  </div>
+</div>
+

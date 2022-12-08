@@ -1,0 +1,73 @@
+<div class="navbar navbar-dark bg-primary shadow-sm ">
+
+  <div class="navbar-brand align-item-center d-flex logo " >
+    <i style="font-size: 40px; margin-top: 10px; margin-left: 10px" class="fa fa-shipping-fast"></i>
+    <strong style="font-size: 40px;" >Store</strong>
+  </div>
+
+  <button class="btn btn-primary btn-outline-light mat-raised-button  " style="margin-right: 5px" (click)="back()">
+    Dashboard
+  </button>
+</div>
+
+  <div class="container" *ngIf="cartService.cartList.length == 0">
+    <div class="card-title">
+      <h5>My Cart</h5>
+    </div>
+    <div class="center">
+      <img src="assets/empty%20cart.png" alt="">
+      <h4>Your cart is Empty!</h4>
+      <h6>Add items to it now</h6>
+      <button class="btn btn-primary" (click)="back()">Shop Now</button>
+    </div>
+  </div>
+
+<ng-container *ngIf="cartService.cartList.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+          <tr>
+            <th>No</th>
+            <th>Item Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let item of cartService.cartList">
+            <td>{{cartService.cartList.indexOf(item)+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.unitPrice}}</td>
+            <td>
+              <button class="btn btn-info btn-sm" (click)="dropItem(item)"><i class="fa fa-minus "></i></button>
+              {{item.qty}}
+              <button class="btn btn-info btn-sm" (click)="addItem(item)"><i class="fa fa-plus "></i></button>
+            </td>
+            <td>{{item.unitPrice * item.qty}}</td>
+            <td><button class="btn btn-danger" (click)="deleteItem(item)">Remove</button></td>
+          </tr>
+          <tr>
+            <th colspan="5" style="text-align: right; font-size: 30px">Grand Total</th>
+            <th style=" font-size: 25px">{{getGrandTotal()}}</th>
+          </tr>
+          <tr >
+            <td colspan="5"></td>
+            <td >
+              <button class="btn btn-primary" (click)="router.navigate(['customer/dashboard/payment'])">Proced</button>
+            </td>
+            <td style="alignment: right">
+              <button class="btn btn-danger " (click)="emptyCart()" >empty</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>

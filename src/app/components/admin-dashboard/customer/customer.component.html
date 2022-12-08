@@ -1,0 +1,29 @@
+<ng-container *ngIf="customerList.length != 0">
+  <div class="container">
+    <div class="card-table">
+      <div class="cart-product">
+        <table class="table table-responsive">
+          <thead>
+
+          <tr>
+            <th>No</th>
+            <th>Customer Name</th>
+            <th>Email</th>
+          </tr>
+
+          </thead>
+
+          <tbody>
+
+          <tr *ngFor="let customer of customerList ">
+            <td>{{customerList.indexOf(customer)+1}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.email}}</td>
+          </tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</ng-container>

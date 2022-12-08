@@ -1,0 +1,21 @@
+.main-outer{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner{
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  margin-top: 25px;
+  border: 1px solid #95a5a6;
+  border-radius: 5px;
+}
+
+
+.row{
+  margin-bottom: 20px;
+  height: 60px;
+}
